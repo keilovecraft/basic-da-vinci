@@ -1,0 +1,2353 @@
+/**
+ *  @file 
+ *  Sass Vars
+ */
+/**
+ *  @file 
+ *  Normalize
+ *  Import the legacy variables (relevant for controlling compass-normalize).
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,500,600,700);
+/* line 7, ../sass/partials/utilities/_normalize.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 22, ../sass/partials/utilities/_normalize.scss */
+html {
+  line-height: 1;
+}
+
+/* line 25, ../sass/partials/utilities/_normalize.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ *  @file
+ *  Mixin library
+ */
+/**
+ *  Hide List Bullets
+ */
+/**
+ *  Show List Bullets
+ */
+/**
+ *  Tag base style
+ */
+/**
+ *  Generic Button style
+ */
+/**
+ *  No-icon Helper
+ */
+/**
+ *  Generic Icon Button style
+ */
+/**
+ *  Text Vertical alignment
+ *  @pre  The container element must have a fixed height.
+ */
+/**
+ *  Layer info on hover
+ *  @param $overlay-color; 
+ *  @param $opacity;
+ */
+/**
+ *  Media Object styles
+ *  @param  $float; 'right','left','initial','inherit' or 'none'
+ *  @param  $left;$right; margin values
+ *  @param  $align; text alignment
+ */
+/**
+ *  Degrading background-color nth times
+ *  @param $color; initial color
+ *  @param $n; number of childs are expected to degrade color
+ */
+/**
+ *  @file 
+ *  Extends and Placeholder library
+ */
+/**
+ *  Hide modes:
+ *    hide-accessible
+ *    hide-modern
+ *    hide
+ *    hidden-tablet / show-tablet
+ */
+/* line 12, ../sass/partials/utilities/_extends.sass */
+.hide-accessible {
+  position: absolute;
+  white-space: nowrap;
+  left: -9999px;
+}
+
+/* line 16, ../sass/partials/utilities/_extends.sass */
+.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #modalContent .ctools-modal-content .modal-header .close, #navigation h2, .page-masonry .view-masonry .view-content .views-row article:hover .close, #block-search-form .form-actions .form-submit,
+#block-search-form #edit-basic .form-submit,
+#search-form .form-actions .form-submit,
+#search-form #edit-basic .form-submit {
+  font-size: 0;
+  color: transparent;
+  line-height: 0;
+}
+
+/* line 20, ../sass/partials/utilities/_extends.sass */
+.hide, #modalContent .ctools-modal-content .modal-header .close img, #overlay #overlay-content #masthead,
+#overlay #overlay-content #navigation {
+  display: none;
+}
+
+/* line 22, ../sass/partials/utilities/_extends.sass */
+.hidden-tablet, #navigation ul#main-menu, #navigation ul#secondary-menu {
+  display: none;
+}
+@media (min-width: 44em) {
+  /* line 22, ../sass/partials/utilities/_extends.sass */
+  .hidden-tablet, #navigation ul#main-menu, #navigation ul#secondary-menu {
+    display: block;
+  }
+}
+
+/* line 26, ../sass/partials/utilities/_extends.sass */
+.show-tablet {
+  display: block;
+}
+@media (min-width: 44em) {
+  /* line 26, ../sass/partials/utilities/_extends.sass */
+  .show-tablet {
+    display: none;
+  }
+}
+
+/* line 31, ../sass/partials/utilities/_extends.sass */
+.media-object {
+  overflow: hidden;
+}
+/* line 160, ../sass/partials/utilities/_mixins.sass */
+.media-object > .body {
+  overflow: hidden;
+}
+/* line 162, ../sass/partials/utilities/_mixins.sass */
+.media-object.left .body {
+  text-align: left;
+}
+/* line 164, ../sass/partials/utilities/_mixins.sass */
+.media-object > .img {
+  float: left;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+/* line 168, ../sass/partials/utilities/_mixins.sass */
+.media-object > .img img {
+  display: block;
+}
+/* line 8, ../sass/partials/utilities/_mixins.sass */
+.media-object:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+/* line 35, ../sass/partials/utilities/_extends.sass */
+.inline > * {
+  display: inline-block;
+}
+
+/* line 37, ../sass/partials/utilities/_extends.sass */
+.button, .form-submit,
+button, ul.inline .comment-add a,
+ul.inline .node-readmore a,
+ul.inline .comment-comments a, .new-comment a, .confirmation #edit-cancel {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  background: #1abc9c;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 49, ../sass/partials/utilities/_extends.sass */
+.button:hover, .form-submit:hover,
+button:hover, ul.inline .comment-add a:hover,
+ul.inline .node-readmore a:hover,
+ul.inline .comment-comments a:hover, .new-comment a:hover, .confirmation #edit-cancel:hover {
+  background: #16a085;
+  text-decoration: none;
+}
+
+/* line 52, ../sass/partials/utilities/_extends.sass */
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 8, ../sass/partials/utilities/_mixins.sass */
+.clearfix:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+/**
+ *  Placeholders
+ */
+/**
+ *  %vertical-align
+ *  @see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ */
+/**
+ *  %table-style-1
+ *  Table generic styles
+ */
+/**
+ *  %grow-width
+ *  Placeholder for right icon fixed: styleguide and grid
+ */
+/* line 94, ../sass/partials/utilities/_extends.sass */
+html.debug head:before {
+  z-index: 99;
+  display: block;
+  position: fixed;
+  right: 0;
+  width: 0;
+  height: 32px;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #1abc9c;
+  overflow: hidden;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 0 0 4px;
+}
+/* line 109, ../sass/partials/utilities/_extends.sass */
+html.debug head:hover:before {
+  background-color: #16a085;
+}
+
+/**
+ *  @file
+ *  Susy config declaration
+ */
+/* Layout
+ * ------
+ * Using a negative margin technique, adapted from ZEN. The page is loaded by this order:
+ * 1. Header
+ * 2. Content
+ * 3. Navigation menus
+ * 4. Sidebar Left
+ * 5. Sideabr Right */
+/* remove 'auto' and the width to switch to a fluid width */
+/* line 11, ../sass/partials/base/_layouts.sass */
+#page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.) */
+/* line 16, ../sass/partials/base/_layouts.sass */
+#content {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0;
+  padding: 0 15px;
+}
+
+/* line 23, ../sass/partials/base/_layouts.sass */
+.sidebar {
+  float: none;
+  clear: both;
+  padding: 0 15px;
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 29, ../sass/partials/base/_layouts.sass */
+#sidebar-second {
+  float: right;
+}
+
+/* line 32, ../sass/partials/base/_layouts.sass */
+#footer {
+  float: none;
+  clear: both;
+}
+
+/* Layout Helpers */
+/* line 37, ../sass/partials/base/_layouts.sass */
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+  padding: 0 15px;
+}
+
+/* Sidebars width
+ * --------------
+ * Changing the width of the sidebars is dead easy, just change the
+ * values below corresponding to the sidebar you want to modify.
+ * Make sure you keep negative values as negative values.
+ * For example, if I want to increase the width of the left sidebar
+ * to 300px, I would have to change each '190' to '300'. */
+/* Columns Inner
+ * -------------
+ * You can change the padding inside the columns without changing the
+ * width of them by just usinbg the INNER div of each column */
+/* line 77, ../sass/partials/base/_layouts.sass */
+.inner {
+  padding: 0;
+}
+
+/* Navigation styles
+ * -----------------
+ * The navigation is loaded after the content, so we need to make space
+ * for it, equal to its height, so if you change the height of the navigation,
+ * remember to adapt the margin top of the content and sidebars. */
+/* line 85, ../sass/partials/base/_layouts.sass */
+#navigation {
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+  padding: 0;
+  width: 100%;
+  height: 40px;
+}
+
+/* line 95, ../sass/partials/base/_layouts.sass */
+.with-navigation #content,
+.with-navigation .sidebar {
+  margin-top: 40px;
+}
+
+/**
+ *  @file
+ *  Layouts
+ *  Define the initial layout of the regions in page.tpl.php
+ * .container
+ *   +container
+ *   +clearfix
+ * .region-top-bar,
+ * .region-preface,
+ * .region-footer
+ *   @extend .container
+ * .site-header
+ *   position: relative
+ *   .header-left
+ *     +span(2 of 12 first)
+ *   .header-right
+ *     +span(10 of 12 last)
+ * .hx
+ *   +full
+ *   float: none
+ * +breakpoint($tablet)
+ *   .container
+ *     +container
+ *   .one-sidebar.sidebar-first
+ *     #content
+ *       +span(9 of 12 last)
+ *     #sidebar-first
+ *       +span(3 of 12 first)
+ *   .one-sidebar.sidebar-second
+ *     #content
+ *       +span(9 of 12 first)
+ *     #sidebar-second
+ *       +span(3 of 12 last)
+ *   .two-sidebars
+ *     #content
+ *       +span(isolate 6 at 4 of 12)
+ *     #sidebar-first
+ *       +span(3 of 12 first)
+ *     #sidebar-second
+ *       +span(3 of 12 last)
+ * +breakpoint($desk)
+ *   .container
+ *     +container
+ */
+/**
+ *  @file
+ *  Skinr styles
+ */
+/* line 8, ../sass/partials/base/_skinr.sass */
+html,
+body {
+  height: 100%;
+}
+
+/* line 11, ../sass/partials/base/_skinr.sass */
+body {
+  font-size: 15px;
+  color: #686257;
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* line 17, ../sass/partials/base/_skinr.sass */
+#page {
+  background: #ffffff;
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 21, ../sass/partials/base/_skinr.sass */
+.main-content {
+  margin-top: 2em;
+}
+
+/* line 24, ../sass/partials/base/_skinr.sass */
+h1, h2, h3, h4, h5, h6 {
+  color: #16a085;
+  font-weight: 600;
+  font-family: "Advent Pro";
+}
+
+/* line 28, ../sass/partials/base/_skinr.sass */
+h1 {
+  font-size: 2.813em;
+}
+
+/* line 30, ../sass/partials/base/_skinr.sass */
+h2 {
+  font-size: 2.074em;
+}
+
+/* line 32, ../sass/partials/base/_skinr.sass */
+h3 {
+  font-size: 1.728em;
+}
+
+/* line 34, ../sass/partials/base/_skinr.sass */
+h4 {
+  font-size: 1.44em;
+}
+
+/* line 36, ../sass/partials/base/_skinr.sass */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 38, ../sass/partials/base/_skinr.sass */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 40, ../sass/partials/base/_skinr.sass */
+a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+/* line 43, ../sass/partials/base/_skinr.sass */
+a:hover {
+  color: #16a085;
+  text-decoration: none;
+}
+
+/* line 48, ../sass/partials/base/_skinr.sass */
+.hx {
+  margin: 1em 0;
+  position: relative;
+  text-align: center;
+}
+/* line 52, ../sass/partials/base/_skinr.sass */
+.hx .page-title {
+  color: #1abc9c;
+  background: #ffffff;
+  display: inline-block;
+  padding: 0 1em;
+  position: relative;
+}
+/* line 58, ../sass/partials/base/_skinr.sass */
+.hx:before {
+  border-top: 2px dashed #CFBEAE;
+  content: "";
+  display: block;
+  top: 23px;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 66, ../sass/partials/base/_skinr.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../sass/partials/utilities/_mixins.sass */
+ul li {
+  list-style-image: none;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
+
+/* line 68, ../sass/partials/base/_skinr.sass */
+ol.show-bullets {
+  list-style-position: outside;
+  list-style-image: none;
+  padding-left: 1.5em;
+  margin-bottom: 1.3em;
+}
+/* line 34, ../sass/partials/utilities/_mixins.sass */
+ol.show-bullets li {
+  margin-bottom: 0.5em;
+  list-style-type: disc;
+}
+/* line 70, ../sass/partials/base/_skinr.sass */
+ol.show-bullets li {
+  list-style-type: decimal;
+}
+
+/* line 72, ../sass/partials/base/_skinr.sass */
+ul.show-bullets {
+  list-style-position: outside;
+  list-style-image: none;
+  padding-left: 1.5em;
+  margin-bottom: 1.3em;
+}
+/* line 34, ../sass/partials/utilities/_mixins.sass */
+ul.show-bullets li {
+  margin-bottom: 0.5em;
+  list-style-type: disc;
+}
+
+/* line 75, ../sass/partials/base/_skinr.sass */
+input,
+select,
+textarea {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #888888;
+  color: #686257;
+  font-size: 0.9em;
+  max-width: 100%;
+  padding: 0.4em 0.8em;
+}
+/* line 85, ../sass/partials/base/_skinr.sass */
+input.error,
+select.error,
+textarea.error {
+  border: 1px solid #c0392b;
+}
+
+/* line 87, ../sass/partials/base/_skinr.sass */
+label {
+  color: #686257;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-bottom: 0.2em;
+}
+
+/* line 92, ../sass/partials/base/_skinr.sass */
+.form-item .description {
+  color: #686257;
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+/* line 96, ../sass/partials/base/_skinr.sass */
+select {
+  height: 31px;
+}
+
+/* line 100, ../sass/partials/base/_skinr.sass */
+dd {
+  margin-bottom: 10px;
+}
+
+/* Basic */
+/* UI improvments. */
+/* line 104, ../sass/partials/base/_skinr.sass */
+#edit-title {
+  font-size: 24px;
+  width: 98%;
+}
+
+/* line 108, ../sass/partials/base/_skinr.sass */
+#system-themes-form img {
+  width: 100px;
+}
+
+/* line 111, ../sass/partials/base/_skinr.sass */
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: #777777;
+}
+
+/* line 118, ../sass/partials/base/_skinr.sass */
+#edit-delete {
+  color: #cc0000;
+}
+
+/* Console, style from slate theme. */
+/* line 122, ../sass/partials/base/_skinr.sass */
+div.messages {
+  padding: 9px;
+  margin: 1em 0;
+  color: #ffffff;
+  background: #FADB61;
+  border: 1px solid #ffffff;
+}
+
+/* line 129, ../sass/partials/base/_skinr.sass */
+div.warning {
+  color: #ffffff;
+  background: #d35400;
+}
+
+/* line 133, ../sass/partials/base/_skinr.sass */
+div.error {
+  color: #ffffff;
+  background: #c0392b;
+}
+
+/* line 137, ../sass/partials/base/_skinr.sass */
+div.status {
+  color: #ffffff;
+  background: #1ABC78;
+}
+
+/**
+ *  @file
+ *  Breadcrumb styles
+ */
+/* line 5, ../sass/partials/components/_breadcrumbs.sass */
+#breadcrumbs {
+  margin: 0.5em 0;
+  line-height: 1.9em;
+  color: #686257;
+}
+/* line 10, ../sass/partials/components/_breadcrumbs.sass */
+#breadcrumbs .breadcrumb > * {
+  margin-right: 2px;
+}
+/* line 12, ../sass/partials/components/_breadcrumbs.sass */
+#breadcrumbs .breadcrumb > a:first-child {
+  background: url('../images/home.png?1427813578') 0 0 no-repeat;
+  width: 25px;
+  height: 22px;
+  display: block;
+  float: left;
+  margin-right: 6px;
+}
+/* line 20, ../sass/partials/components/_breadcrumbs.sass */
+#breadcrumbs .breadcrumb_next {
+  opacity: 0.6;
+}
+
+/**
+ *  @file
+ *  Button styles
+ */
+/* line 8, ../sass/partials/components/_buttons.sass */
+.form-submit#edit-submit, .form-submit#edit-preview, .form-submit#edit-preview-changes, .form-submit#edit-delete, .form-submit#edit-undo, .form-submit#edit-reset,
+button#edit-submit,
+button#edit-preview,
+button#edit-preview-changes,
+button#edit-delete,
+button#edit-undo,
+button#edit-reset {
+  margin-right: 1%;
+}
+
+/* line 16, ../sass/partials/components/_buttons.sass */
+ul.inline .comment-add,
+ul.inline .node-readmore,
+ul.inline .comment-comments {
+  padding-left: 0;
+}
+
+/* File
+ * Chosen - Overwriting chosen styles
+ */
+/* line 6, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-choices {
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px;
+  border: 1px solid #686257;
+  height: 31px;
+  background-image: none;
+}
+/* line 11, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-single {
+  height: 31px;
+  background: #ffffff;
+  border: 1px solid #686257;
+  box-shadow: none;
+  line-height: 2.2em;
+}
+/* line 17, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-drop {
+  background: #ffffff;
+  border: 1px solid #686257;
+}
+/* line 20, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-results {
+  margin: 0;
+  padding: 0;
+}
+/* line 24, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-results li.highlighted {
+  background-color: #1abc9c;
+  background-image: none;
+}
+
+/* line 30, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border: 1px solid #686257;
+  background: #ffffff;
+  box-shadow: none;
+}
+/* line 34, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-active .chosen-choices {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 39, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-multi .chosen-choices li.search-choice {
+  background-color: #E1DED2;
+  background-image: none;
+  color: #ABA280;
+}
+
+/**
+ *  @file
+ *  Comments styles
+ */
+/* line 6, ../sass/partials/components/_comments.sass */
+#comments {
+  margin-top: 5.26316%;
+}
+/* line 8, ../sass/partials/components/_comments.sass */
+#comments .title {
+  color: #16a085;
+  display: inline-block;
+  font-weight: normal;
+}
+
+/* line 12, ../sass/partials/components/_comments.sass */
+.comments-count {
+  position: relative;
+  top: -5px;
+  text-align: center;
+  line-height: 1.7em;
+  margin-left: 10px;
+  background: url('../images/comments.png?1427813578') 0 0 no-repeat;
+  width: 42px;
+  height: 40px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+/* line 23, ../sass/partials/components/_comments.sass */
+.comment {
+  -moz-box-shadow: 0px 10px 10px -10px #888888;
+  -webkit-box-shadow: 0px 10px 10px -10px #888888;
+  box-shadow: 0px 10px 10px -10px #888888;
+}
+/* line 25, ../sass/partials/components/_comments.sass */
+.comment .attribution {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+/* line 30, ../sass/partials/components/_comments.sass */
+.comment .attribution .user-picture {
+  float: left;
+  margin-right: 1em;
+  width: 50px;
+}
+/* line 35, ../sass/partials/components/_comments.sass */
+.comment .attribution .comment-submitted p {
+  color: #686257;
+  font-size: 0.9em;
+}
+/* line 38, ../sass/partials/components/_comments.sass */
+.comment .attribution .comment-submitted .commenter-name {
+  float: left;
+}
+/* line 40, ../sass/partials/components/_comments.sass */
+.comment .attribution .comment-submitted .comment-time {
+  text-align: right;
+}
+/* line 44, ../sass/partials/components/_comments.sass */
+.comment .comment-text ul.links {
+  text-align: right;
+  float: right;
+  border-top: 1px dotted #686257;
+  width: 60%;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 5px;
+}
+/* line 53, ../sass/partials/components/_comments.sass */
+.comment .new {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #1abc9c;
+  color: #ffffff;
+  float: right;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  padding: 0.2em 0.5em;
+  text-transform: uppercase;
+}
+
+/* line 62, ../sass/partials/components/_comments.sass */
+.new-comment {
+  display: inline-block;
+  float: right;
+}
+/* line 67, ../sass/partials/components/_comments.sass */
+.new-comment a:hover {
+  color: #ffffff;
+}
+
+/**
+ *  @file
+ *  Debug grid (susy) component
+ *  @pre Activate Grid at Theme Settings
+ *  @see http://susy.readthedocs.org/en/latest/settings/#debug
+ */
+/* line 8, ../sass/partials/components/_debug-grid.sass */
+html head:before {
+  display: none;
+}
+/* line 12, ../sass/partials/components/_debug-grid.sass */
+html.debug head:before {
+  content: "|||| Grid";
+  top: 57%;
+  padding: 9px 24px 0 8px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0.3s;
+  -moz-transition: all 0.3s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
+}
+/* line 19, ../sass/partials/components/_debug-grid.sass */
+html.debug head:hover:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 75px;
+}
+/* line 24, ../sass/partials/components/_debug-grid.sass */
+html.overlay-open head:before {
+  display: none;
+}
+
+/* line 27, ../sass/partials/components/_debug-grid.sass */
+head:hover ~ .container:before,
+head:hover ~ .region-top-bar:before,
+head:hover ~ .region-preface:before,
+head:hover ~ .region-footer:before,
+head:hover ~ body .container:before,
+head:hover ~ body .region-top-bar:before,
+head:hover ~ body .region-preface:before,
+head:hover ~ body .region-footer:before {
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, rgba(0, 0, 0, 0) 80%);
+}
+
+/**
+ *  @file
+ *  Elements styles
+ */
+/* line 5, ../sass/partials/components/_elements.sass */
+.backtotop {
+  position: fixed;
+  right: 0em;
+  bottom: 1em;
+  -webkit-transition: right 1s ease-in-out 0;
+  -moz-transition: right 1s ease-in-out 0;
+  transition: right 1s ease-in-out 0;
+  z-index: 9;
+}
+/* line 11, ../sass/partials/components/_elements.sass */
+.backtotop.active {
+  right: 1em;
+  -webkit-transition: right 1s ease-in-out 0;
+  -moz-transition: right 1s ease-in-out 0;
+  transition: right 1s ease-in-out 0;
+}
+/* line 14, ../sass/partials/components/_elements.sass */
+.backtotop a {
+  background: url('../images/backtotop.png?1427813578') center center no-repeat #1abc9c;
+  display: block;
+  padding: 18px 20px;
+  color: #ffffff;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 21, ../sass/partials/components/_elements.sass */
+.backtotop a:hover {
+  background-color: #16a085;
+}
+
+/**
+ *  @file
+ *  Fieldset form styles
+ */
+/* line 5, ../sass/partials/components/_fieldsets.sass */
+fieldset {
+  margin-bottom: 1em;
+}
+
+/* line 7, ../sass/partials/components/_fieldsets.sass */
+legend {
+  margin: 0.5em 0;
+}
+
+/* line 9, ../sass/partials/components/_fieldsets.sass */
+fieldset .fieldset-legend {
+  padding-left: 1em;
+  text-transform: uppercase;
+}
+
+/* line 12, ../sass/partials/components/_fieldsets.sass */
+html.js fieldset.collapsed {
+  border-width: 1px;
+}
+
+/* line 14, ../sass/partials/components/_fieldsets.sass */
+fieldset.collapsible .fieldset-legend {
+  display: block;
+}
+
+/**
+ *  @file
+ *  Form styles
+ */
+/* line 6, ../sass/partials/components/_forms.sass */
+form .field-multiple-table {
+  margin: 0;
+}
+
+/* line 8, ../sass/partials/components/_forms.sass */
+form .field-multiple-table th.field-label {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 11, ../sass/partials/components/_forms.sass */
+form .field-multiple-table td.field-multiple-drag {
+  width: 30px;
+  padding-right: 0;
+}
+
+/* line 14, ../sass/partials/components/_forms.sass */
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
+  padding-right: 0.5em;
+}
+
+/* line 16, ../sass/partials/components/_forms.sass */
+form .field-add-more-submit {
+  margin: 0.5em 0 0;
+}
+
+/* line 20, ../sass/partials/components/_forms.sass */
+tr.odd .form-item.shs-wrapper-processed,
+tr.even .form-item.shs-wrapper-processed {
+  white-space: normal;
+}
+/* line 23, ../sass/partials/components/_forms.sass */
+tr.odd .form-item.shs-wrapper-processed .shs-select,
+tr.even .form-item.shs-wrapper-processed .shs-select {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 27, ../sass/partials/components/_forms.sass */
+.form-managed-file .form-file,
+.form-managed-file .form-submit {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}
+
+/* line 33, ../sass/partials/components/_forms.sass */
+.confirmation #edit-cancel {
+  float: right;
+  font-weight: bold;
+  font-size: 15px;
+}
+/* line 38, ../sass/partials/components/_forms.sass */
+.confirmation #edit-cancel:hover {
+  background: #ABA280;
+}
+/* line 40, ../sass/partials/components/_forms.sass */
+.confirmation #edit-submit {
+  background-image: none;
+  padding: 10px;
+}
+
+/* line 44, ../sass/partials/components/_forms.sass */
+#contact-site-form #edit-name,
+#contact-site-form #edit-mail,
+#contact-site-form #edit-subject {
+  width: 100%;
+}
+/* line 48, ../sass/partials/components/_forms.sass */
+#contact-site-form #edit-actions {
+  text-align: right;
+}
+
+/* line 53, ../sass/partials/components/_forms.sass */
+.loading-layer .form-actions:before {
+  content: "";
+  background: url('../images/progress.gif?1427813578') 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+/* line 61, ../sass/partials/components/_forms.sass */
+.loading-layer .form-actions .form-submit {
+  opacity: 0.2;
+  cursor: default;
+}
+/* line 64, ../sass/partials/components/_forms.sass */
+.loading-layer .form-actions .form-submit:hover {
+  background: #ABA280;
+  cursor: default;
+}
+
+/* line 69, ../sass/partials/components/_forms.sass */
+#user-login-form .item-list li {
+  margin: 0;
+}
+
+/**
+ *  @file
+ *  Media styles
+ */
+/* line 5, ../sass/partials/components/_media.sass */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ *  @file
+ *  Messages (Success, Warning and Error) styles
+ */
+/* line 6, ../sass/partials/components/_messages.sass */
+.messages.error, .messages.warning, .messages.status {
+  padding: 0 15px;
+  color: #ffffff;
+  border-width: 1px;
+  z-index: 99;
+}
+/* line 13, ../sass/partials/components/_messages.sass */
+.messages.error .container, .messages.warning .container, .messages.status .container {
+  text-align: left;
+  padding: 1em 1em 1em 4em;
+  width: 100%;
+}
+/* line 17, ../sass/partials/components/_messages.sass */
+.messages.error .container ul, .messages.warning .container ul, .messages.status .container ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../sass/partials/utilities/_mixins.sass */
+.messages.error .container ul li, .messages.warning .container ul li, .messages.status .container ul li {
+  list-style-image: none;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
+/* line 19, ../sass/partials/components/_messages.sass */
+.messages.error .container ul li, .messages.warning .container ul li, .messages.status .container ul li {
+  list-style: none;
+}
+/* line 21, ../sass/partials/components/_messages.sass */
+.messages.error .container a, .messages.warning .container a, .messages.status .container a {
+  text-decoration: underline;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* line 26, ../sass/partials/components/_messages.sass */
+.messages.error {
+  background: #c0392b;
+  border-color: #962d22;
+}
+/* line 29, ../sass/partials/components/_messages.sass */
+.messages.error .container {
+  background: url('../images/ico-error.png?1427813578') 0% 50% no-repeat;
+}
+/* line 31, ../sass/partials/components/_messages.sass */
+.messages.warning {
+  background: #d35400;
+  border-color: #a04000;
+}
+/* line 34, ../sass/partials/components/_messages.sass */
+.messages.warning .container {
+  background: url('../images/ico-info.png?1427813578') 0% 50% no-repeat;
+}
+/* line 36, ../sass/partials/components/_messages.sass */
+.messages.status {
+  background: #1ABC78;
+  border-color: #148f5b;
+}
+/* line 39, ../sass/partials/components/_messages.sass */
+.messages.status .container {
+  background: url('../images/ico-success.png?1427813578') 0% 50% no-repeat;
+}
+
+/* line 42, ../sass/partials/components/_messages.sass */
+.krumo-messages > pre {
+  border: 1px solid #686257;
+  padding: 1em;
+  background-color: #FADB61;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+/**
+ *  @file
+ *  Modal styles
+ *  @pre easyModal.jquery.js & ctools modal
+ */
+/* line 7, ../sass/partials/components/_modal.sass */
+#modalBackdrop {
+  background: #ABA280 !important;
+}
+
+/* line 10, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content {
+  border: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 5px 12px #ABA280;
+  -webkit-box-shadow: 0 5px 12px #ABA280;
+  box-shadow: 0 5px 12px #ABA280;
+}
+/* line 14, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-header {
+  padding: 1em 1.5em;
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+/* line 18, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-header .close {
+  margin-top: 3px;
+  background: url('../images/close.png?1427813578') 0 0 no-repeat;
+  display: block;
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+/* line 26, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-header .close:hover {
+  opacity: 1;
+}
+/* line 30, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-content {
+  width: 100% !important;
+  padding: 1.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* File
+ * Overlay module styles
+ */
+/**
+ *  @file
+ *  Pager styles
+ */
+/* line 6, ../sass/partials/components/_pager.sass */
+.item-list .pager {
+  margin: 15px 0;
+}
+/* line 8, ../sass/partials/components/_pager.sass */
+.item-list .pager li {
+  padding: 0;
+}
+/* line 10, ../sass/partials/components/_pager.sass */
+.item-list .pager li.pager-current {
+  color: #16a085;
+}
+/* line 14, ../sass/partials/components/_pager.sass */
+.item-list .pager li.pager-first a, .item-list .pager li.pager-last a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 21, ../sass/partials/components/_pager.sass */
+.item-list .pager li.pager-first a:hover, .item-list .pager li.pager-last a:hover {
+  background-color: #16a085;
+}
+
+/**
+ *  @file
+ *  Tables generic styles
+ */
+/* line 6, ../sass/partials/components/_tables.sass */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  margin: 15px 0;
+}
+/* line 12, ../sass/partials/components/_tables.sass */
+table code {
+  white-space: normal;
+  background-color: transparent;
+}
+
+/* line 15, ../sass/partials/components/_tables.sass */
+table.tabledrag-processed {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+/* line 19, ../sass/partials/components/_tables.sass */
+thead {
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+/* line 22, ../sass/partials/components/_tables.sass */
+thead a {
+  color: #ffffff;
+}
+/* line 24, ../sass/partials/components/_tables.sass */
+thead a:hover {
+  color: #ffffff;
+}
+
+/* line 26, ../sass/partials/components/_tables.sass */
+th {
+  border-bottom: none;
+  padding: 0.5em 1em;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* line 31, ../sass/partials/components/_tables.sass */
+th.active img {
+  display: inline;
+}
+
+/* line 34, ../sass/partials/components/_tables.sass */
+tbody {
+  border: 1px solid #E1DED2;
+  border-top: none;
+}
+
+/* line 37, ../sass/partials/components/_tables.sass */
+td {
+  padding: 1em;
+}
+/* line 39, ../sass/partials/components/_tables.sass */
+td.active {
+  background-color: transparent;
+}
+
+/* line 42, ../sass/partials/components/_tables.sass */
+tr.even,
+tr.odd {
+  border-bottom: none;
+  padding: 0;
+}
+
+/* line 46, ../sass/partials/components/_tables.sass */
+tr.odd {
+  background-color: #ffffff;
+}
+
+/* line 48, ../sass/partials/components/_tables.sass */
+tr.even {
+  background-color: #E1DED2;
+}
+
+/* line 50, ../sass/partials/components/_tables.sass */
+tr.draggable td {
+  border: 1px solid #686257;
+  padding: 0.5em;
+}
+
+/* line 53, ../sass/partials/components/_tables.sass */
+tr.drag {
+  background-color: #686257;
+}
+
+/* line 55, ../sass/partials/components/_tables.sass */
+tr.drag-previous {
+  background-color: #E1DED2;
+}
+
+/* line 57, ../sass/partials/components/_tables.sass */
+tr.selected td {
+  background: #E1DED2;
+}
+
+/* line 59, ../sass/partials/components/_tables.sass */
+td.checkbox,
+th.checkbox {
+  text-align: center;
+}
+
+/* line 62, ../sass/partials/components/_tables.sass */
+form .field-multiple-table td.field-multiple-drag {
+  padding-right: 0;
+  width: 50px;
+}
+
+/* line 65, ../sass/partials/components/_tables.sass */
+body div.tabledrag-changed-warning {
+  margin-bottom: 0.5em;
+}
+
+/* line 67, ../sass/partials/components/_tables.sass */
+.tabledrag-toggle-weight {
+  font-size: 0.9em;
+}
+
+/* line 69, ../sass/partials/components/_tables.sass */
+.draggable a.tabledrag-handle {
+  cursor: move;
+  float: left;
+  height: 1.7em;
+  margin-left: 0;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* line 76, ../sass/partials/components/_tables.sass */
+a.tabledrag-handle .handle {
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  width: 15px;
+}
+
+/* Tabs CSS
+ * --------
+ * Adds styles for the primary and secondary tabs.
+ *
+ * Compare this with default CSS found in the system module's stylesheet (a copy
+ * of which is in drupal5-reference.css, line 510.) */
+/* line 8, ../sass/partials/components/_tabs-basic.sass */
+div.tabs {
+  margin: 0 0 5px 0;
+}
+
+/* line 11, ../sass/partials/components/_tabs-basic.sass */
+ul.primary, ul.secondary {
+  width: 99%;
+}
+
+/* line 14, ../sass/partials/components/_tabs-basic.sass */
+ul.primary {
+  margin: 0;
+  padding: 0 0 0 10px;
+  border-width: 0;
+  list-style: none;
+  white-space: nowrap;
+  line-height: normal;
+  background: url(../images/tabs/tab-bar.png) repeat-x left bottom;
+}
+/* line 22, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 27, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li.active a, ul.primary li.active a:hover {
+  border-width: 0;
+  color: black;
+  background-color: transparent;
+  background: url(../images/tabs/tab-left.png) no-repeat left 0;
+}
+/* line 32, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li.active a .tab, ul.primary li.active a:hover .tab {
+  background: url(../images/tabs/tab-right.png) no-repeat right 0;
+}
+/* line 34, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-width: 0;
+  font-weigh: bold;
+  text-decoration: none;
+  color: #777777;
+  background-color: transparent;
+  background: url(../images/tabs/tab-left.png) no-repeat left -38px;
+}
+/* line 45, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li a:hover {
+  border-width: 0;
+  background-color: transparent;
+  background: url(../images/tabs/tab-left.png) no-repeat left -76px;
+}
+/* line 49, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li a:hover .tab {
+  background: url(../images/tabs/tab-right.png) no-repeat right -76px;
+}
+/* line 51, ../sass/partials/components/_tabs-basic.sass */
+ul.primary li a .tab {
+  display: block;
+  height: 20px;
+  margin: 0;
+  padding: 4px 13px 0 6px;
+  border-width: 0;
+  line-height: 20px;
+  background: url(../images/tabs/tab-right.png) no-repeat right -38px;
+}
+
+/* line 60, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary {
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-bottom: 1px solid silver;
+  list-style: none;
+  white-space: nowrap;
+  background: url(../images/tabs/tab-secondary-bg.png) repeat-x left bottom;
+}
+/* line 67, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary li {
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px 0;
+  border-right: none;
+}
+/* line 72, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid silver;
+  text-decoration: none;
+  color: #777777;
+  background: url(../images/tabs/tab-secondary.png) repeat-x left -56px;
+}
+/* line 81, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary a .active, ul.secondary a .active:hover {
+  border: 1px solid silver;
+  color: black;
+  background: url(../images/tabs/tab-secondary.png) repeat-x left top;
+}
+/* line 85, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary a:hover {
+  background: url(../images/tabs/tab-secondary.png) repeat-x left bottom;
+}
+/* line 87, ../sass/partials/components/_tabs-basic.sass */
+ul.secondary a .tab {
+  display: block;
+  height: 18px;
+  margin: 0;
+  padding: 3px 8px;
+  line-height: 18px;
+}
+
+/**
+ *  @file
+ *  Tabs structure styles
+ */
+/* line 5, ../sass/partials/components/_tabs.sass */
+.tabs-wrapper {
+  border-bottom: 1px solid #1abc9c;
+  margin-bottom: 15px;
+}
+
+/* line 8, ../sass/partials/components/_tabs.sass */
+.tabs.primary,
+.nav-tabs.nav {
+  margin: 0 0 1px 0;
+  border-width: 0;
+  padding-left: 0;
+}
+@media (min-width: 44em) {
+  /* line 8, ../sass/partials/components/_tabs.sass */
+  .tabs.primary,
+  .nav-tabs.nav {
+    padding-left: 1.5em;
+  }
+}
+/* line 15, ../sass/partials/components/_tabs.sass */
+.tabs.primary li,
+.nav-tabs.nav li {
+  display: block;
+  margin-bottom: 5px;
+}
+@media (min-width: 44em) {
+  /* line 15, ../sass/partials/components/_tabs.sass */
+  .tabs.primary li,
+  .nav-tabs.nav li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+/* line 21, ../sass/partials/components/_tabs.sass */
+.tabs.primary li a,
+.nav-tabs.nav li a {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #1abc9c;
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: -1px;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+@media (min-width: 44em) {
+  /* line 21, ../sass/partials/components/_tabs.sass */
+  .tabs.primary li a,
+  .nav-tabs.nav li a {
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px 4px 0 0;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    color: #ffffff;
+  }
+}
+/* line 35, ../sass/partials/components/_tabs.sass */
+.tabs.primary li a:hover,
+.nav-tabs.nav li a:hover {
+  background-color: #ffffff;
+  border-color: #1abc9c;
+  color: #1abc9c;
+  border-style: solid;
+}
+@media (min-width: 44em) {
+  /* line 35, ../sass/partials/components/_tabs.sass */
+  .tabs.primary li a:hover,
+  .nav-tabs.nav li a:hover {
+    border-style: solid solid none solid;
+  }
+}
+/* line 43, ../sass/partials/components/_tabs.sass */
+.tabs.primary li.active a,
+.nav-tabs.nav li.active a {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #ffffff;
+  border-style: solid;
+  cursor: default;
+}
+@media (min-width: 44em) {
+  /* line 43, ../sass/partials/components/_tabs.sass */
+  .tabs.primary li.active a,
+  .nav-tabs.nav li.active a {
+    color: #1abc9c;
+    background-color: #ffffff;
+    border-style: solid solid none solid;
+  }
+}
+
+/* line 55, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs {
+  padding: 15px;
+}
+/* line 57, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs ul.vertical-tabs-list {
+  margin: -16px 0px -1px -15em;
+}
+
+/**
+ *  @file
+ *  Language switcher nav styles
+ */
+/**
+ *  @file
+ *  Main menu navigation styles
+ */
+/* line 5, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation {
+  background-color: #1abc9c;
+  padding-top: 10px;
+}
+/* line 10, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../sass/partials/utilities/_mixins.sass */
+#navigation ul li {
+  list-style-image: none;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
+/* line 12, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li {
+  float: left;
+  margin-right: 0.6em;
+  margin-bottom: 0;
+}
+/* line 16, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li:last-child {
+  margin-right: 0;
+}
+/* line 18, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li a {
+  display: block;
+  color: #ffffff;
+  padding: 0 0.9em;
+  height: 35px;
+  border-bottom: 0 solid #1abc9c;
+  line-height: 2.2em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+/* line 27, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li a:hover {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+/* line 29, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li a:hover, #navigation ul li a.active {
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 35px solid #ffffff;
+  color: #1abc9c;
+}
+/* line 34, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul li a.active {
+  font-weight: 600;
+}
+@media (min-width: 44em) {
+  /* line 36, ../sass/partials/components/navigation/_main-menu.sass */
+  #navigation ul#main-menu, #navigation ul#secondary-menu {
+    display: inline-block;
+  }
+}
+/* line 41, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul#main-menu {
+  float: left;
+}
+/* line 43, ../sass/partials/components/navigation/_main-menu.sass */
+#navigation ul#secondary-menu {
+  float: right;
+}
+
+/**
+ *  @file
+ *  Sliding menu nav styles
+ *  @see http://refills.bourbon.io/components/
+ */
+/* line 6, ../sass/partials/components/navigation/_sliding-menu.sass */
+.sliding-menu-button,
+.sliding-menu-content {
+  display: none;
+}
+
+@media (max-width: 44em) {
+  /* line 10, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .sliding-menu-button {
+    -moz-border-radius: 2px 0px 0px 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px 0px 0px 2px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1em;
+    outline: none;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    right: 0px;
+  }
+  /* line 20, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .sliding-menu-button img {
+    height: 1.3em;
+  }
+
+  /* line 22, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .sliding-menu-content {
+    position: fixed;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 160px;
+    -webkit-transform: translateX(-220px);
+    -moz-transform: translateX(-220px);
+    -ms-transform: translateX(-220px);
+    -o-transform: translateX(-220px);
+    transform: translateX(-220px);
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    display: inline-block;
+    background: #686257;
+    z-index: 999999;
+    opacity: 0.95;
+    padding-top: 20px;
+  }
+  /* line 32, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .sliding-menu-content.is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 34, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .menu-screen {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    background: #1abc9c;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+  }
+  /* line 41, ../sass/partials/components/navigation/_sliding-menu.sass */
+  .menu-screen.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+  }
+}
+/**
+ *  @file
+ *  Content Region Styles
+ */
+/* line 5, ../sass/partials/regions/_content.sass */
+.region-content {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 1em;
+  margin-bottom: 1em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+/* line 8, ../sass/partials/utilities/_mixins.sass */
+.region-content .block-system:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+/**
+ *  @file
+ *  Footer Region Styles
+ */
+/* line 5, ../sass/partials/regions/_footer.sass */
+.site-footer {
+  background: #E1DED2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em 0;
+  color: #ffffff;
+}
+
+/**
+ *  @file
+ *  Header Region Styles
+ */
+/* line 5, ../sass/partials/regions/_header.sass */
+.top-bar {
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* line 8, ../sass/partials/regions/_header.sass */
+.site-header {
+  background: #ffffff;
+  min-height: 75px;
+}
+/* line 11, ../sass/partials/regions/_header.sass */
+.site-header #name-slogan {
+  position: absolute;
+  bottom: 10px;
+}
+/* line 15, ../sass/partials/regions/_header.sass */
+.site-header #name-slogan .site-name h1 {
+  margin: 0;
+  font-family: "Advent Pro";
+}
+/* line 18, ../sass/partials/regions/_header.sass */
+.site-header #name-slogan .site-name a {
+  color: #CFBEAE;
+}
+/* line 20, ../sass/partials/regions/_header.sass */
+.site-header #name-slogan .site-slogan {
+  color: #16a085;
+}
+
+/* line 22, ../sass/partials/regions/_header.sass */
+#site-logo img {
+  max-width: 100%;
+}
+
+/**
+ *  @file
+ *  Preface Region Styles
+ */
+/* line 5, ../sass/partials/regions/_preface.sass */
+#preface {
+  color: #ffffff;
+  background: #CFBEAE;
+  min-height: 8em;
+}
+
+/**
+ *  @file
+ *  Sidebar Region Styles
+ */
+/**
+ *  @file
+ *  Masonry Blocks Styles
+ */
+/* line 6, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .region-content {
+  background: none;
+  border: none;
+  padding: 0;
+}
+/* line 11, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content {
+  overflow: hidden;
+}
+/* line 13, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+@media (min-width: 30em) {
+  /* line 13, ../sass/partials/content/block/_block-masonry.sass */
+  .page-masonry .view-masonry .view-content .views-row {
+    width: 50%;
+  }
+}
+@media (min-width: 64em) {
+  /* line 13, ../sass/partials/content/block/_block-masonry.sass */
+  .page-masonry .view-masonry .view-content .views-row {
+    width: 33%;
+  }
+}
+/* line 21, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article {
+  background-color: #ffffff;
+  border: 1px solid #E1DED2;
+  border-bottom-width: 3px;
+  padding: 5px 20px 20px 20px;
+  margin: 0 15px 30px 0;
+  position: relative;
+  -moz-box-shadow: 7px 0px 10px -9px #686257;
+  -webkit-box-shadow: 7px 0px 10px -9px #686257;
+  box-shadow: 7px 0px 10px -9px #686257;
+  -webkit-transition: border-bottom 0.2s ease-in-out 0.2s;
+  -moz-transition: border-bottom 0.2s ease-in-out 0.2s;
+  transition: border-bottom 0.2s ease-in-out 0.2s;
+}
+/* line 30, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .title {
+  margin-bottom: 5px;
+  text-align: center;
+}
+/* line 33, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .title:hover {
+  text-decoration: underline;
+}
+/* line 35, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .close {
+  display: none;
+}
+/* line 37, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .field-type-image {
+  float: none;
+  text-align: center;
+  border-top: 3px solid #E1DED2;
+}
+/* line 41, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .field-type-image img {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  -webkit-transition: all 0.2s ease-in-out 0.2s;
+  -moz-transition: all 0.2s ease-in-out 0.2s;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+/* line 44, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover {
+  border-bottom: 3px solid #686257;
+  -webkit-transition: border-bottom 0.2s ease-in-out;
+  -moz-transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out;
+}
+/* line 47, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .close {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../images/close.png?1427813578') center no-repeat;
+  background-color: #E1DED2;
+  width: 16px;
+  height: 16px;
+  padding: 11px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 61, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .close:hover {
+  background-color: #686257;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 65, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .field-type-image img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 69, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li {
+  margin: 4px 0;
+  display: block;
+}
+/* line 72, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li.comment_forbidden {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+  border-top: 1px solid #1abc9c;
+  padding-top: 5px;
+}
+/* line 78, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li > a {
+  display: block;
+}
+
+/**
+ *  @file
+ *  Generic Blocks Styles
+ */
+/* line 5, ../sass/partials/content/block/_blocks.sass */
+.block {
+  margin-bottom: 15px;
+}
+
+/**
+ *  @file
+ *  Search Form Block Styles
+ */
+/* line 9, ../sass/partials/content/block/_search.sass */
+#block-search-form .form-actions .form-submit,
+#block-search-form #edit-basic .form-submit,
+#search-form .form-actions .form-submit,
+#search-form #edit-basic .form-submit {
+  background: url('../images/lupa.png?1427813578') center center no-repeat #1abc9c;
+  padding: 15px 17px;
+  position: relative;
+  top: -4px;
+}
+/* line 15, ../sass/partials/content/block/_search.sass */
+#block-search-form .form-actions .form-submit:hover,
+#block-search-form #edit-basic .form-submit:hover,
+#search-form .form-actions .form-submit:hover,
+#search-form #edit-basic .form-submit:hover {
+  background-color: #16a085;
+}
+
+/**
+ *  @file
+ *  IE specific styles
+ */
+/* line 7, ../sass/partials/content/browser/_explorer.sass */
+.ie .form-contact .form-textarea {
+  max-width: 450px;
+  max-height: 95px;
+}
+/* line 13, ../sass/partials/content/browser/_explorer.sass */
+.ie .form-contact article a img {
+  width: 100%;
+}
+/* line 18, ../sass/partials/content/browser/_explorer.sass */
+.ie #navigation ul li a {
+  color: #ffffff;
+  border-bottom: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: color 0.1 easy-in-out;
+  -moz-transition: color 0.1 easy-in-out;
+  transition: color 0.1 easy-in-out;
+}
+/* line 23, ../sass/partials/content/browser/_explorer.sass */
+.ie #navigation ul li a:hover {
+  border-bottom: 0;
+  color: #1abc9c;
+  background-color: #ffffff;
+  -webkit-transition: color 0.1 easy-in-out;
+  -moz-transition: color 0.1 easy-in-out;
+  transition: color 0.1 easy-in-out;
+}
+/* line 28, ../sass/partials/content/browser/_explorer.sass */
+.ie #navigation ul li a.active {
+  border-bottom: 0;
+  background-color: #ffffff;
+  color: #1abc9c;
+}
+
+/**
+ *  @file
+ *  Firefox specific styles
+ */
+/* line 6, ../sass/partials/content/browser/_firefox.sass */
+.gecko a {
+  outline: 0;
+}
+/* line 12, ../sass/partials/content/browser/_firefox.sass */
+.gecko.debug head:before {
+  letter-spacing: 0;
+}
+/* line 15, ../sass/partials/content/browser/_firefox.sass */
+.gecko .tabs.primary,
+.gecko .nav-tabs.nav {
+  margin-bottom: 0;
+}
+
+/**
+ *  @file
+ *  Safari specific styles
+ */
+/**
+ *  @file
+ *  Node-detail generic styles
+ */
+/* line 8, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section .submitted,
+.page-node- section .submitted {
+  text-align: right;
+}
+/* line 10, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section .field-name-field-image,
+.page-node- section .field-name-field-image {
+  margin-bottom: 5.26316%;
+  text-align: center;
+}
+/* line 13, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section .field-label-above,
+.page-node- section .field-label-above {
+  margin-bottom: 3.44828%;
+}
+/* line 15, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section .field-label-above .field-label,
+.page-comment-reply- section .field-label-above .field-items,
+.page-comment-reply- section .field-label-above .field-item,
+.page-node- section .field-label-above .field-label,
+.page-node- section .field-label-above .field-items,
+.page-node- section .field-label-above .field-item {
+  display: inline-block;
+}
+/* line 19, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section .field-label-above .field-item,
+.page-node- section .field-label-above .field-item {
+  margin-left: 0.3em;
+}
+/* line 21, ../sass/partials/content/nodes/_node-detail.sass */
+.page-comment-reply- section ul,
+.page-node- section ul {
+  list-style-position: outside;
+  list-style-image: none;
+  padding-left: 1.5em;
+  margin-bottom: 1.3em;
+}
+/* line 34, ../sass/partials/utilities/_mixins.sass */
+.page-comment-reply- section ul li,
+.page-node- section ul li {
+  margin-bottom: 0.5em;
+  list-style-type: disc;
+}
+
+/**
+ *  @file
+ *  Node generic styles
+ */
+/* line 7, ../sass/partials/content/nodes/_nodes.sass */
+.page-node .submitted {
+  opacity: 0.9;
+}
+
+/**
+ *  @file
+ *  Cookie-Law Compliance specific styles
+ */
+/* line 5, ../sass/partials/content/pages/_cookies.sass */
+.page-cookies {
+  margin-top: 15px;
+  font-size: 14px;
+}
+/* line 8, ../sass/partials/content/pages/_cookies.sass */
+.page-cookies ul {
+  margin: 10px 0;
+  padding-left: 17px;
+}
+/* line 11, ../sass/partials/content/pages/_cookies.sass */
+.page-cookies ul li {
+  list-style-type: disc;
+  margin: 5px 0;
+}
+
+/* line 15, ../sass/partials/content/pages/_cookies.sass */
+#sliding-popup {
+  opacity: 0.85;
+}
+/* line 18, ../sass/partials/content/pages/_cookies.sass */
+#sliding-popup .popup-content #popup-text {
+  max-width: 67%;
+}
+/* line 20, ../sass/partials/content/pages/_cookies.sass */
+#sliding-popup .popup-content #popup-text p {
+  padding: 10px 0;
+  margin: 0;
+}
+/* line 24, ../sass/partials/content/pages/_cookies.sass */
+#sliding-popup .popup-content #popup-buttons button {
+  box-shadow: none;
+  margin-right: 0;
+  margin-bottom: 0;
+  background: #ffffff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #ABA280;
+  text-shadow: none;
+}
+
+/**
+ *  @file
+ *  Maintenance page styles
+ */
+/* line 6, ../sass/partials/content/pages/_page-maintenance.sass */
+.maintenance-page #page {
+  background: #E1DED2;
+  text-align: center;
+}
+/* line 10, ../sass/partials/content/pages/_page-maintenance.sass */
+.maintenance-page #page #header #logo-title {
+  padding-top: 2em;
+}
+/* line 13, ../sass/partials/content/pages/_page-maintenance.sass */
+.maintenance-page #page #container #content {
+  padding-top: 1em;
+}
+
+/**
+ *  @file
+ *  Page generic styles
+ */
+/**
+ *  @file
+ *  Views styles
+ */
+/* line 5, ../sass/partials/content/views/_views.sass */
+.node-teaser {
+  padding-bottom: 3.44828%;
+  margin-bottom: 3.44828%;
+  border-bottom: 1px solid #CFBEAE;
+}
+/* line 9, ../sass/partials/content/views/_views.sass */
+.node-teaser:last-child {
+  border-width: 0;
+}
+/* line 11, ../sass/partials/content/views/_views.sass */
+.node-teaser .content {
+  overflow: hidden;
+  padding-top: 4.16667%;
+}
+/* line 14, ../sass/partials/content/views/_views.sass */
+.node-teaser .submitted {
+  font-size: 80%;
+}
+/* line 16, ../sass/partials/content/views/_views.sass */
+.node-teaser .field-type-image {
+  float: left;
+  margin-right: 4.16667%;
+  margin-bottom: 4.16667%;
+}
+/* line 20, ../sass/partials/content/views/_views.sass */
+.node-teaser .field-name-field-tags {
+  clear: both;
+  margin-bottom: 4.16667%;
+}
+/* line 23, ../sass/partials/content/views/_views.sass */
+.node-teaser .field-name-field-tags .field-label,
+.node-teaser .field-name-field-tags .field-items,
+.node-teaser .field-name-field-tags .field-item {
+  display: inline-block;
+}
+/* line 27, ../sass/partials/content/views/_views.sass */
+.node-teaser .field-name-field-tags .field-item {
+  margin-left: 5px;
+}
+
+/* line 32, ../sass/partials/content/views/_views.sass */
+.views-exposed-form .views-exposed-widget {
+  max-width: 100%;
+}
+
+/* Yes, we all hate IE6. */
+/* Fix the admin page in ie6. */
+/* line 5, ../sass/partials/browsers/_ie6.sass */
+div.admin .left,
+div.admin .right {
+  width: 46%;
+}
+
+/* Tabs CSS - IE 5 and 6 don't support PNGs with alpha transparency. */
+/* line 10, ../sass/partials/browsers/_ie6.sass */
+ul.primary,
+ul.secondary {
+  width: 100%;
+  width: auto;
+}
+/* line 14, ../sass/partials/browsers/_ie6.sass */
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab {
+  display: inline;
+  display: inline-block;
+}
+
+/* line 21, ../sass/partials/browsers/_ie6.sass */
+ul.primary li a {
+  background: url(../images/tabs/tab-left-ie6.png) no-repeat left -38px;
+}
+/* line 23, ../sass/partials/browsers/_ie6.sass */
+ul.primary li a .tab {
+  background: url(../images/tabs/tab-right-ie6.png) no-repeat right -38px;
+}
+/* line 25, ../sass/partials/browsers/_ie6.sass */
+ul.primary li a:hover {
+  cursor: pointer;
+  color: #555555;
+  text-decoration: none;
+  background-position: left -76px;
+}
+/* line 30, ../sass/partials/browsers/_ie6.sass */
+ul.primary li a:hover .tab {
+  background-position: right -76px;
+}
+/* line 33, ../sass/partials/browsers/_ie6.sass */
+ul.primary li.active a, ul.primary li.active a:hover {
+  background: url(../images/tabs/tab-left-ie6.png) no-repeat left 0;
+}
+/* line 35, ../sass/partials/browsers/_ie6.sass */
+ul.primary li.active a .tab, ul.primary li.active a:hover .tab {
+  background: url(../images/tabs/tab-right-ie6.png) no-repeat right 0;
+}
+
+/* line 41, ../sass/partials/browsers/_ie6.sass */
+ul.secondary li a:hover {
+  cursor: pointer;
+  color: #555555;
+  text-decoration: none;
+}
+
+/* Drupal admin tables */
+/* line 49, ../sass/partials/browsers/_ie6.sass */
+#content tr.even th,
+#content tr.even td,
+#content tr.odd th,
+#content tr.odd td {
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Yes, we all hate IE7 too. */
+/* Drupal admin tables. */
+/* line 6, ../sass/partials/browsers/_ie7.sass */
+#content tr.even th,
+#content tr.even td,
+#content tr.odd th,
+#content tr.odd td {
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Minor fix for primary and secondary tabs in IE */
+/* line 14, ../sass/partials/browsers/_ie7.sass */
+ul .primary li a:hover,
+ul .secondary li a:hover {
+  cursor: pointer;
+  color: #555555;
+  text-decoration: none;
+}
