@@ -1672,7 +1672,7 @@ div.vertical-tabs ul.vertical-tabs-list {
  *  Content Region Styles
  */
 /* line 5, ../sass/partials/regions/_content.sass */
-.region-content {
+#content-region {
   background: #ffffff;
   border: 1px solid #ffffff;
   padding: 1em;
@@ -1682,7 +1682,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   border-radius: 0.5em;
 }
 /* line 8, ../sass/partials/utilities/_mixins.sass */
-.region-content .block-system:after {
+#content-region .block-system:after {
   content: ".";
   display: block;
   visibility: hidden;
@@ -1695,7 +1695,7 @@ div.vertical-tabs ul.vertical-tabs-list {
  *  Footer Region Styles
  */
 /* line 5, ../sass/partials/regions/_footer.sass */
-.site-footer {
+#footer {
   background: #F7F7F7;
   position: absolute;
   bottom: 0;
@@ -1710,38 +1710,43 @@ div.vertical-tabs ul.vertical-tabs-list {
  *  Header Region Styles
  */
 /* line 5, ../sass/partials/regions/_header.sass */
-.top-bar {
-  overflow: hidden;
-  background: #ffffff;
-}
-
-/* line 8, ../sass/partials/regions/_header.sass */
 .site-header {
   background: #ffffff;
   min-height: 75px;
 }
-/* line 11, ../sass/partials/regions/_header.sass */
+/* line 8, ../sass/partials/regions/_header.sass */
 .site-header #name-slogan {
   position: absolute;
   bottom: 10px;
 }
-/* line 15, ../sass/partials/regions/_header.sass */
-.site-header #name-slogan .site-name h1 {
+/* line 11, ../sass/partials/regions/_header.sass */
+.site-header #name-slogan .site-name {
   margin: 0;
   font-family: "Advent Pro";
 }
-/* line 18, ../sass/partials/regions/_header.sass */
+/* line 14, ../sass/partials/regions/_header.sass */
 .site-header #name-slogan .site-name a {
   color: #6E7B91;
 }
-/* line 20, ../sass/partials/regions/_header.sass */
+/* line 16, ../sass/partials/regions/_header.sass */
 .site-header #name-slogan .site-slogan {
   color: #FC3342;
 }
 
-/* line 22, ../sass/partials/regions/_header.sass */
-#site-logo img {
+/* line 18, ../sass/partials/regions/_header.sass */
+.site-logo img {
   max-width: 100%;
+}
+
+/**
+ *  @file
+ *  Preface Region Styles
+ */
+/* line 5, ../sass/partials/regions/_preface.sass */
+#preface {
+  background: #F7F7F7;
+  padding: 1em;
+  color: #333333;
 }
 
 /**

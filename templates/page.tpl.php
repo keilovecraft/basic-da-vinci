@@ -21,19 +21,19 @@
       <div id="logo-title">
 
         <?php if (!empty($logo)): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
           </a>
         <?php endif; ?>
 
-        <div id="name-and-slogan">
+        <div id="name-slogan">
           <?php if (!empty($site_name)): ?>
-            <h1 id="site-name">
+            <h1 class="site-name">
               <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
           <?php endif; ?>
           <?php if (!empty($site_slogan)): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
+            <div class="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div> <!-- /name-and-slogan -->
 
@@ -95,13 +95,6 @@
           <?php endif; ?>
 
           <?php print $feed_icons; ?>
-
-          <?php if ($content_bottom): ?>
-            <div id="content-bottom">
-              <?php print $content_bottom; ?>
-            </div><!-- /#content-bottom -->
-          <?php endif; ?>
-
           </div>
         </div> <!-- /content-inner /content -->
 
@@ -130,8 +123,12 @@
 
       </div> <!-- /main -->
 
-      <div class="backtotop">
-       <?php print l(t('Come up'), '#', array('external' => TRUE));?>
+      <!-- ______________________ PREFOOTER _______________________ -->
+          <?php if ($prefooter): ?>
+            <div id="prefooter">
+              <?php print $prefooter; ?>
+            </div><!-- /#prefooter -->
+          <?php endif; ?>
       </div>
 
       <!-- ______________________ FOOTER _______________________ -->
@@ -141,6 +138,10 @@
           <?php print $footer_block; ?>
         </div> <!-- /footer -->
       <?php endif; ?>
+
+      <div class="backtotop">
+       <?php print l(t('Come up'), '#', array('external' => TRUE));?>
+      </div>
 
     </div> <!-- /page -->
     <?php print $closure; ?>
