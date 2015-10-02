@@ -15,7 +15,22 @@ html
         padding: 9px 24px 0 8px
         cursor: pointer
         +transition(all 0.3s ease-in-out .3s)
-        @extend %grow-width
+        z-index: 99
+        display: block
+        position: fixed
+        right: 0
+        width: 0
+        height: 32px
+        font-size: 14px
+        letter-spacing: .8px
+        font-weight: bold
+        white-space: nowrap
+        color: $color-grow
+        background-color: $background-grow
+        overflow: hidden
+        +border-radius(4px 0 0 4px)
+        &:hover
+          background-color: $background-grow-hover
       &:hover:before
         +transition(all 0.3s ease-in-out)
         width: 75px

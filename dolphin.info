@@ -5,12 +5,13 @@ core = "6.x"
 project = "dolphin"
 engine = phptemplate
 
-regions[content_top] = Content top
 regions[header] = Header
+regions[preface] = Preface
+regions[content_region] = Content region
+regions[content_bottom] = Content bottom
 regions[left] = First sidebar
 regions[right] = Second sidebar
 regions[footer_block] = Footer
-regions[content_bottom] = Content bottom
 
 features[] = logo
 features[] = name
@@ -26,13 +27,6 @@ features[] = secondary_links
 stylesheets[all][] = stylesheets/main.css
 stylesheets[print][] = stylesheets/print.css
 
-; Compass Support
-; http://drupal.org/project/compass
-compass[status] = 1
-compass[sass_dir] = sass
-compass[css_dir] = css
-             
-settings[dolphin_zen_tabs]             = 1
 settings[dolphin_wireframe]            = 0
 settings[dolphin_block_editing]        = 1
 settings[dolphin_rebuild_registry]     = 0

@@ -12,14 +12,6 @@ function dolphin_settings($saved_settings, $subtheme_defaults = array()) {
    * Create the form using Forms API
    */
 
-  $form['dolphin_zen_tabs'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('Use Zen Tabs'),
-    '#default_value' => $settings['dolphin_zen_tabs'],
-    '#description'   => t('Replace the default tabs by the Zen Tabs.'),
-    '#prefix'        => '<strong>' . t('Zen Tabs:') . '</strong>',
-  );
-
   $form['dolphin_breadcrumb'] = array(
     '#type'          => 'fieldset',
     '#title'         => t('Breadcrumb settings'),

@@ -13,21 +13,13 @@
   </head>
 
   <body class="<?php print $body_classes; ?>">
-    <div id="skip">
-      <a href="#content"><?php print t('Skip to Content'); ?></a>
-      <?php if (!empty($primary_links) || !empty($secondary_links)): ?>
-        <a href="#navigation"><?php print t('Skip to Navigation'); ?></a>
-      <?php endif; ?>
-    </div>
-
     <div id="page">
 
     <!-- ______________________ HEADER _______________________ -->
 
     <div id="header">
-
       <div id="logo-title">
-	
+
         <?php if (!empty($logo)): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
@@ -54,21 +46,19 @@
       <?php endif; ?>
 
       <?php // Uncomment to add the search box.// print $search_box; ?>
-
     </div> <!-- /header -->
 
     <!-- ______________________ MAIN _______________________ -->
-
     <div id="main" class="clearfix">
     
       <div id="content">
         <div id="content-inner" class="inner column center">
-
-          <?php if ($content_top): ?>
-            <div id="content-top">
-              <?php print $content_top; ?>
-            </div> <!-- /#content-top -->
+          <?php if ($preface): ?>
+            <div id="preface">
+              <?php print $preface; ?>
+            </div> <!-- /#preface -->
           <?php endif; ?>
+
 
           <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
             <div id="content-header">
@@ -97,6 +87,12 @@
           <div id="content-area">
             <?php print $content; ?>
           </div> <!-- /#content-area -->
+
+          <?php if ($content_region): ?>
+            <div id="content-region">
+              <?php print $content_region; ?>
+            </div> <!-- /#content-region -->
+          <?php endif; ?>
 
           <?php print $feed_icons; ?>
 
@@ -139,7 +135,6 @@
       </div>
 
       <!-- ______________________ FOOTER _______________________ -->
-
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>
         <div id="footer">
           <?php print $footer_message; ?>
