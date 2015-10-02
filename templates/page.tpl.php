@@ -5,6 +5,7 @@
     
     <title><?php print $head_title; ?></title>
     <?php print $head; ?>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <?php print $styles; ?>
     <!--[if lte IE 6]><link type="text/css" rel="stylesheet" media="all" href="<?php print $base_path . path_to_theme(); ?>/css/ie6.css" /><![endif]-->
     <!--[if IE 7]><link type="text/css" rel="stylesheet" media="all" href="<?php print $base_path . path_to_theme(); ?>/css/ie7.css" /><![endif]-->
