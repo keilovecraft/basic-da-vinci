@@ -8,7 +8,7 @@
  *  Normalize
  *  Import the legacy variables (relevant for controlling compass-normalize).
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,500,600,700);
 /* line 7, ../sass/partials/utilities/_normalize.scss */
 html, body, div, span, applet, object, iframe,
@@ -347,9 +347,9 @@ body {
 
 /* line 11, ../sass/partials/base/_skinr.sass */
 body {
-  font-size: 15px;
+  font-size: 14px;
   color: #333333;
-  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-family: "Roboto", "Helvetica", sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -481,56 +481,53 @@ textarea {
   background: #ffffff;
   border: 1px solid #6E7B91;
   color: #6E7B91;
-  font-size: 0.9em;
   max-width: 100%;
   padding: 0.4em 0.8em;
 }
-/* line 77, ../sass/partials/base/_skinr.sass */
+/* line 76, ../sass/partials/base/_skinr.sass */
 input.error,
 select.error,
 textarea.error {
   border: 1px solid #c0392b;
 }
 
-/* line 79, ../sass/partials/base/_skinr.sass */
+/* line 78, ../sass/partials/base/_skinr.sass */
 label {
   color: #6E7B91;
-  font-size: 0.9em;
   font-weight: normal;
   margin-bottom: 0.2em;
 }
 
-/* line 84, ../sass/partials/base/_skinr.sass */
+/* line 82, ../sass/partials/base/_skinr.sass */
 .form-item .description {
   color: #6E7B91;
-  font-size: 0.8em;
   margin-top: 0.2em;
 }
 
-/* line 88, ../sass/partials/base/_skinr.sass */
+/* line 85, ../sass/partials/base/_skinr.sass */
 select {
   height: 31px;
 }
 
-/* line 92, ../sass/partials/base/_skinr.sass */
+/* line 89, ../sass/partials/base/_skinr.sass */
 dd {
   margin-bottom: 10px;
 }
 
 /* Basic */
 /* UI improvments. */
-/* line 96, ../sass/partials/base/_skinr.sass */
+/* line 93, ../sass/partials/base/_skinr.sass */
 #edit-title {
   font-size: 24px;
   width: 98%;
 }
 
-/* line 100, ../sass/partials/base/_skinr.sass */
+/* line 97, ../sass/partials/base/_skinr.sass */
 #system-themes-form img {
   width: 100px;
 }
 
-/* line 103, ../sass/partials/base/_skinr.sass */
+/* line 100, ../sass/partials/base/_skinr.sass */
 .form-item .description {
   font-style: italic;
   line-height: 1.2em;
@@ -539,13 +536,13 @@ dd {
   color: #777777;
 }
 
-/* line 110, ../sass/partials/base/_skinr.sass */
+/* line 107, ../sass/partials/base/_skinr.sass */
 #edit-delete {
   color: #cc0000;
 }
 
 /* Console, style from slate theme. */
-/* line 114, ../sass/partials/base/_skinr.sass */
+/* line 111, ../sass/partials/base/_skinr.sass */
 div.messages {
   padding: 9px;
   margin: 1em 0;
@@ -554,19 +551,19 @@ div.messages {
   border: 1px solid #ffffff;
 }
 
-/* line 121, ../sass/partials/base/_skinr.sass */
+/* line 118, ../sass/partials/base/_skinr.sass */
 div.warning {
   color: #ffffff;
   background: #d35400;
 }
 
-/* line 125, ../sass/partials/base/_skinr.sass */
+/* line 122, ../sass/partials/base/_skinr.sass */
 div.error {
   color: #ffffff;
   background: #c0392b;
 }
 
-/* line 129, ../sass/partials/base/_skinr.sass */
+/* line 126, ../sass/partials/base/_skinr.sass */
 div.status {
   color: #ffffff;
   background: #1ABC78;
